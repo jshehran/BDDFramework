@@ -9,10 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/appFeatures"},
 		glue = {"stepdefinitions", "appHooks"},
-		plugin = {"pretty"}
+		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "timeline:test-output-thread/"}
 		)
-//				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-//				"timeline:test-output-thread/"
 public class SanityRunner {
 
 }
